@@ -2,11 +2,21 @@
 
 # Embeddings Voyage AI (n8n node)
 
+> ℹ️ Only supports `Text Embeddings`: https://docs.voyageai.com/docs/embeddings
+
 This node integrates [Voyage AI](https://www.voyageai.com/) with [n8n](https://n8n.io), allowing you to generate high-quality text embeddings using Voyage’s models. It is compatible with n8n’s AI embedding interface.
 
-## Installation
+![](images/voyage-ai-by-mongodb-white.png)
 
-`n8n-nodes-voyageai-embeddings-unofficial`
+https://www.voyageai.com/
+
+![](/screenshots/workflow-canvas.png)
+
+# Install `n8n-nodes-voyageai-embeddings-unofficial`
+
+> Requires self-hosted n8n
+
+![](/screenshots/install.png)
 
 ## Features
 
@@ -17,16 +27,17 @@ This node integrates [Voyage AI](https://www.voyageai.com/) with [n8n](https://n
 
 ## Setup
 
-1. Create a new credential using your Voyage AI API key.
-2. Add the **Embeddings Voyage AI** node to your workflow.
-3. Select a model (e.g. `voyage-3`, `voyage-code-3`, etc).
-4. Optionally configure advanced options like dimensions or timeout.
-5. Connect it to a compatible node (e.g. vector store).
+1. After installing, find the **Embeddings Voyage AI** node in the n8n node palette
+   when adding an embedding node.
+   
+   > ![](/screenshots/find-embedding.png)
+   > ![](/screenshots/new-node.png)
 
-## Requirements
+2. Create a new credential using your Voyage AI API key.
 
-- A valid Voyage AI API key
+  > ![](/screenshots/choose-credential.png)
+  > ![](/screenshots/credentials.png)
 
-## Resources
+2. That's it! You can choose text embedding models.
 
-- [Voyage AI Documentation](https://docs.voyageai.com)
+  > ![](/screenshots/models.png)
