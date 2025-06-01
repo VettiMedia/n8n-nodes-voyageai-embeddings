@@ -29,6 +29,7 @@ export class EmbeddingsVoyageAi implements INodeType {
 	description: INodeTypeDescription = {
 		displayName: "Embeddings Voyage AI",
 		name: "embeddingsVoyageAi",
+		icon: "file:voyage-ai.svg",
 		credentials: [
 			{
 				name: "voyageAiApi",
