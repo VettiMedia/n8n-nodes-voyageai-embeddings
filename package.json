@@ -1,19 +1,23 @@
 {
-	"name": "n8n-nodes-global-variables",
-	"version": "0.1.1",
-	"description": "Global Variables node for n8n",
+	"name": "n8n-nodes-voyageai-embeddings",
+	"version": "0.1.0",
+	"description": "Voyage AI Embeddings node for n8n",
 	"keywords": [
-		"n8n-community-node-package"
+		"n8n-community-node-package",
+		"voyage-ai",
+		"embeddings",
+		"ai",
+		"machine-learning"
 	],
 	"license": "MIT",
-	"homepage": "https://github.com/mrowrpurr/n8n-nodes-global-variables",
+	"homepage": "https://github.com/mrowrpurr/n8n-nodes-voyageai-embeddings",
 	"author": {
 		"name": "Mrowr Purr",
 		"email": "mrowr.purr@gmail.com"
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/mrowrpurr/n8n-nodes-global-variables.git"
+		"url": "https://github.com/mrowrpurr/n8n-nodes-voyageai-embeddings.git"
 	},
 	"engines": {
 		"node": ">=20.15"
@@ -33,10 +37,10 @@
 	"n8n": {
 		"n8nNodesApiVersion": 1,
 		"credentials": [
-			"dist/credentials/GlobalVariablesCredentials.credentials.js"
+			"dist/credentials/VoyageAiCredentialsApi.credentials.js"
 		],
 		"nodes": [
-			"dist/nodes/GlobalVariables/GlobalVariables.node.js"
+			"dist/nodes/EmbeddingsVoyageAi/EmbeddingsVoyageAi.node.js"
 		]
 	},
 	"devDependencies": {
@@ -50,5 +54,10 @@
 	"peerDependencies": {
 		"n8n-workflow": "*"
 	},
-	"packageManager": "pnpm@10.5.0+sha512.11106a5916c7406fe4b8cb8e3067974b8728f47308a4f5ac5e850304afa6f57e2847d7950dfe78877d8d36bfb401d381c4215db3a4c3547ffa63c14333a6fa51"
+	"packageManager": "pnpm@10.5.0+sha512.11106a5916c7406fe4b8cb8e3067974b8728f47308a4f5ac5e850304afa6f57e2847d7950dfe78877d8d36bfb401d381c4215db3a4c3547ffa63c14333a6fa51",
+	"dependencies": {
+		"@langchain/community": "^0.3.45",
+		"@langchain/core": "^0.3.57",
+		"langchain": "^0.3.27"
+	}
 }
