@@ -1,13 +1,11 @@
 {
-	"name": "n8n-nodes-voyageai-embeddings",
+	"name": "n8n-nodes-voyageai-embeddings-unofficial",
 	"version": "0.1.0",
-	"description": "Voyage AI Embeddings node for n8n",
+	"description": "(Unofficial) Voyage AI Embeddings node for n8n",
 	"keywords": [
 		"n8n-community-node-package",
 		"voyage-ai",
-		"embeddings",
-		"ai",
-		"machine-learning"
+		"embeddings"
 	],
 	"license": "MIT",
 	"homepage": "https://github.com/mrowrpurr/n8n-nodes-voyageai-embeddings",
