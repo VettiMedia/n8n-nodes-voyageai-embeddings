@@ -135,12 +135,19 @@ export class EmbeddingsVoyageAi implements INodeType {
 			inputType: "document",
 			truncation: true,
 			outputDimension: options.dimensions,
-			encodingFormat: "float",
+			// encodingFormat: "float", // this breaks sometimes!
 		})
 		embeddings.basePath = options.baseURL ?? (credentials.url as string)
 
 		return {
-			response: embeddings,
+			response: {
+				embedQuery: async (text: string): Promise<number[]> => {
+					return await embeddings.embedQuery(text)
+				},
+				embedDocuments: async (texts: string[]): Promise<number[][]> => {
+					return await embeddings.embedDocuments(texts)
+				},
+			},
 		}
 	}
 }
