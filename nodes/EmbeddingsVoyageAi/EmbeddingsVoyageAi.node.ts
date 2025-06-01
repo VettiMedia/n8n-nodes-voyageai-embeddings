@@ -98,11 +98,6 @@ export class EmbeddingsVoyageAi implements INodeType {
 						],
 						default: 256,
 						description: "Number of dimensions for the embeddings (only supported by some models)",
-						displayOptions: {
-							show: {
-								model: ["voyage-3-large", "voyage-code-3"],
-							},
-						},
 					},
 					{
 						displayName: "Strip New Lines",

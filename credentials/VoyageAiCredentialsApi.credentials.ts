@@ -1,11 +1,10 @@
-import type { IAuthenticateGeneric, ICredentialTestRequest, ICredentialType, INodeProperties } from "n8n-workflow"
+import type { IAuthenticateGeneric, Icon, ICredentialType, INodeProperties } from "n8n-workflow"
 
 export class VoyageAiCredentialsApi implements ICredentialType {
 	name = "voyageAiApi"
-
 	displayName = "Voyage AI API"
-
-	documentationUrl = "https://docs.voyageai.com"
+	documentationUrl = "https://docs.voyageai.com/docs/api-key-and-installation"
+	icon: Icon = "file:voyage-ai.svg"
 
 	properties: INodeProperties[] = [
 		{
@@ -34,10 +33,18 @@ export class VoyageAiCredentialsApi implements ICredentialType {
 		},
 	}
 
-	test: ICredentialTestRequest = {
-		request: {
-			baseURL: "={{$credentials?.url}}",
-			url: "/models",
-		},
-	}
+	// test: ICredentialTestRequest = {
+	// 	request: {
+	// 		method: "POST",
+	// 		baseURL: "={{$credentials?.url}}",
+	// 		url: "/embeddings",
+	// 		headers: {
+	// 			"Content-Type": "application/json",
+	// 		},
+	// 		body: {
+	// 			input: ["test"],
+	// 			model: "invalid-model-for-testing",
+	// 		},
+	// 	},
+	// }
 }
