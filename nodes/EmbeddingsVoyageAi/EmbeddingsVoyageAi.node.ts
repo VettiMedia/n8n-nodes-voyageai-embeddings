@@ -7,16 +7,16 @@ const modelParameter: INodeProperties = {
 	type: "options",
 	description: "The model to generate embeddings with",
 	options: [
-		{ name: "voyage-3", value: "voyage-3" },
+		{ name: "voyage-3.5", value: "voyage-3.5" },
 		{ name: "voyage-3-large", value: "voyage-3-large" },
-		{ name: "voyage-3-lite", value: "voyage-3-lite" },
+		{ name: "voyage-3.5-lite", value: "voyage-3.5-lite" },
 		{ name: "voyage-code-2", value: "voyage-code-2" },
 		{ name: "voyage-code-3", value: "voyage-code-3" },
 		{ name: "voyage-finance-2", value: "voyage-finance-2" },
 		{ name: "voyage-law-2", value: "voyage-law-2" },
 		{ name: "voyage-multilingual-2", value: "voyage-multilingual-2" },
 	],
-	default: "voyage-3",
+	default: "voyage-3.5-lite",
 	routing: {
 		send: {
 			type: "body",
